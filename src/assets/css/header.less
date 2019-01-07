@@ -1,0 +1,405 @@
+@import './common';
+.header-context{
+	box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .6);
+    font-size: 14px;
+    overflow: hidden;
+    .header{
+    	position: relative;
+    	i{
+			font-size: 14px;
+			padding: 0 5px;
+		}
+    	.header-left{
+    		float: left;
+    		line-height: 60px;
+    		font-size: 14px;
+    		.logo{
+    			width: 260px;
+			    text-align: center;
+			    line-height: 60px;
+			    float: left;
+			    img{
+			    	height: 50px;
+    				vertical-align: middle;
+			    }
+    		}
+    		.nav{
+    			float: left;
+    			.btn{
+    				border-radius: 2px;
+				    padding: 7px 10px;
+				    padding-left: 5px;
+				    margin-left: 10px;
+				    transition: .3s;
+				    &.active{
+				    	background: #ed4101;
+    					color: #fff;
+				    }
+				    &:hover{
+				    	background: #ed4101;
+    					color: #fff;
+				    }
+    			}
+    			.txt{
+    				color:#e51a14;
+    			}
+    		}
+    	}
+    	.header-right{
+        position: relative;
+    		float:right;
+    		margin-right: 10px;
+    		.toggle-skin{
+    			text-align: center;
+			    font-size: 14px;
+			    float: left;
+			    display: block;
+			    height: 60px;
+			    line-height: 60px;
+			    color: #fff;
+			    padding: 0 10px;
+			    transition: .3s;
+			    &:hover { background: rgba(0, 0, 0, .4);}
+        }
+        .toggle-skins{
+          position: fixed;
+          right: 350px;
+          width: 200px;
+          text-align: center;
+			    font-size: 14px;
+			    height: 60px;
+			    line-height: 60px;
+			    color: #fff;
+			    padding: 0 10px;
+			    transition: .3s;
+          &:hover {
+
+            background: rgba(0, 0, 0, .4);
+          }
+
+    		}
+    		.userinfo{
+    			text-align: center;
+			    font-size: 14px;
+			    float: left;
+			    display: block;
+			    height: 60px;
+			    line-height: 60px;
+			    color: #fff;
+			    padding: 0 10px;
+			    transition: .3s;
+			    &:hover { background: rgba(0, 0, 0, .4); }
+			    .userimg{
+			    	border: 0;
+			    	height: 32px;
+				    margin-right: 5px;
+				    border-radius: 50%;
+				    vertical-align: middle;
+			    }
+    		}
+    		.userlogout{
+    			text-align: center;
+			    font-size: 14px;
+			    float: left;
+			    display: block;
+			    height: 60px;
+			    line-height: 60px;
+			    color: #fff;
+			    padding-right: 10px;
+			    padding-left: 10px;
+			    transition: .3s;
+			    &:hover { background: rgba(0, 0, 0, .4); }
+    		}
+    		.userlogin{
+    			text-align: center;
+			    font-size: 14px;
+			    float: left;
+			    display: block;
+			    width: 130px;
+			    height: 60px;
+			    line-height: 60px;
+			    color: #F44336;
+			    transition: .3s;
+			    &:hover { background: rgba(0, 0, 0, .4);}
+    		}
+    		.reg{
+    			text-align: center;
+			    font-size: 14px;
+			    float: left;
+			    display: block;
+			    width: 70px;
+			    height: 32px;
+			    line-height: 32px;
+			    margin-top: 15px;
+			    background: #e65610;
+			    color: #FFF;
+			    margin-left: 15px;
+			    transition: .3s;
+			    border-radius: 2px;
+			    margin-right: 10px;
+			    &:hover { background: #ce4d0e }
+    		}
+    		.login{
+    			text-align: center;
+			    font-size: 14px;
+			    float: left;
+			    display: block;
+			    width: 70px;
+			    height: 32px;
+			    line-height: 32px;
+			    margin-top: 15px;
+			    background: #0e79f6;
+			    color: #fff;
+			    transition: .3s;
+			    border-radius: 2px;
+			    margin-right: 10px;
+			    &:hover { background: #0b70c2 }
+        }
+        //私聊窗口
+          .demo-badge{
+            float: left;
+            margin-top: 15px;
+            width: 35px;
+            height: 35px;
+            background: #eee;
+            border-radius: 6px;
+          }
+		}
+		.header-card {
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			z-index: 1000;
+			background: #fff;
+			border-radius: 1px;
+			left: 50%;
+			top: 100px;
+			margin-left: -15%;
+			padding-top: 10px;
+			padding-left: 48px;
+			display: flex;
+			width: 350px;
+			border-radius: 2px;
+			.header-card-container {
+				position: relative;
+				.header-bg {
+					width: 350px;
+					height: 50px;
+					position: absolute;
+					left: -33px;
+					top: -10px;
+					background: url("/static/images/login_bg.png") no-repeat;
+					background-position: 0 -5px;
+					background-size: 100%;
+				}
+			}
+			.psw-tips {
+				margin-top: 3px;
+				margin-left: -7px;
+				display: inline;
+				font-size: 12px;
+				color: #333;
+			}
+			.tips-container {
+				width: 280px;
+				height: 43px;
+				border: 1px solid #eee;
+				line-height: 20px;
+				font-size: 13px;
+				text-align: center;
+			}
+		}
+	}
+	.ivu-tabs-nav .ivu-tabs-tab  {
+		font-size: 16px;
+		padding: 8px 30px;
+	}
+	.ivu-tabs-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+	.ivu-input-group-prepend {
+		padding: 4px;
+	}
+	.ivu-tabs-ink-bar {
+		left: 28px;
+		width: 67px !important;
+	}
+	.ivu-input {
+		border: 1px solid #d7d7d7;
+	}
+	.ivu-input-group-prepend {
+		border: 1px solid #d7d7d7;
+		border-right: none;
+	}
+	.ivu-input-wid {
+    width: 280px;
+	}
+}
+
+.skin-model{
+	.ivu-modal-body{
+		padding: 0px;
+	}
+	.skin-list{
+		height: 468px;
+    	width: 600px;
+    	li{
+    		float: left;
+		    margin-left: 12px;
+		    margin-top: 12px;
+		    padding: 5px;
+		    background-color: #fff;
+		    border: 1px solid #ddd;
+		    border-radius: 2px;
+		    transition: .3s;
+		    cursor: pointer;
+		    transition: border .2s ease-in-out;
+		    &:hover { border-color: #ed4101!important; box-shadow: 0 0 8px #ed4101; }
+		    img{
+		    	width: 173px;
+			    height: 90px;
+			    vertical-align: middle;
+		    }
+    	}
+	}
+}
+
+.info-card {
+	.ivu-modal-body{
+		padding: 0px;
+	}
+	.ivu-modal-close{
+		right: 6px;
+    	top: 3px;
+		.ivu-icon-ios-close{
+			color:#fff;
+			&:hover{
+				color:#ed4101;
+			}
+		}
+
+	}
+	.info-card-head {
+		border-top-left-radius: 3px;
+    	border-top-right-radius: 3px;
+		width: 100%;
+		height: 100px;
+		position: relative;
+		background: url("../images/head-bg.jpeg") 100% no-repeat;
+		background-size: 600px 100px;
+		img {
+			width: 68px;
+			height: 68px;
+			position: absolute;
+			top: 16px;
+			left: 10px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+		}
+		p {
+			font-size: 13px;
+			text-shadow: 1px 1px 1px #000;
+			color: #fff;
+		}
+		h1 {
+			display: inline;
+			position: absolute;
+			top: 17px;
+			left: 90px;
+			font-size: 18px;
+			text-shadow: 2px 2px 2px #000;
+			color: #fff;
+			.spe-img {
+				width: 14px;
+				height: 14px;
+				margin: -10px 0 0 250px;
+				border-radius: 50%;
+				border: none;
+			}
+			.spe-p {
+				font-size: 13px;
+				color: red;
+				text-shadow: none;
+				margin: -61px 0 0 277px;
+			}
+		}
+	}
+	.info-body {
+		ul {
+      height: 344px;
+			li {
+				width: 100%;
+				max-height: 289px;
+				margin-top: 4px;
+				padding-bottom: 3px;
+				padding-left: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				border-bottom: 1px solid #e5e5e5;
+				p {
+					line-height: 24px;
+					font-size: 13px;
+					color: #333;
+					display: inline;
+				}
+				img {
+					width: 65px;
+					height: 65px;
+					border-radius: 50%;
+					margin: 3px 7px 3px 0;
+				}
+				img:hover {
+					width: 62px;
+					height: 62px;
+					border-radius: 50%;
+					border: 3px solid red;
+				}
+				.on-ok {
+					width: 62px;
+					height: 62px;
+					border-radius: 50%;
+					border: 3px solid red;
+				}
+			}
+		}
+		.spe-bar {
+			width: 90%;
+			padding-top: 10px;
+			display: flex;
+			justify-content: flex-end;
+			bottom: 5px;
+			position: absolute;
+			background: #fff;
+		}
+		.no-border {
+			border: none;
+		}
+		.high-line {
+			line-height: 34px;
+		}
+		.input-wid {
+      width: 300px;
+      .bangding {
+        cursor: pointer;
+        font-family:MicrosoftYaHei;
+        color: rgba(238,0,36,1);
+      }
+		}
+	}
+}
+.random-code {
+	width: 100px;
+	height: 45px;
+	margin-left: 25px;
+	border-radius: 4px;
+	border: 1px solid #c2c2c2;
+	// background: #333;
+	display: flex;
+	justify-content: center;
+
+}
+
